@@ -10,7 +10,7 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
   
-  test "require item in cart" do
+  test "requires item in cart" do
     get new_order_url
     assert_redirected_to store_index_path
     assert_equal 'Your cart is empty', flash[:notice]
